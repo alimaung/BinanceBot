@@ -1,0 +1,8 @@
+django
+djangorestframework
+channels
+daphne
+python-binance
+python-decouple
+pandas
+django-cors-headers
