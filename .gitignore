@@ -1,0 +1,99 @@
+# Django stuff:
+*.log
+*.pot
+*.pyc
+*.pyo
+__pycache__/
+db.sqlite3
+*.sqlite3
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Python dependencies
+venv/
+env/
+env.bak/
+venv.bak/
+
+# Django migrations
+*/migrations/*
+!*/migrations/__init__.py
+
+# IDE and editor folders
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Static files (if using git to manage these)
+static/
+media/
+
+# ALPHA VERSION + DASHBOARD
+alpha/
+nuxt-black-dashboard-master/
+
+# Docker-related files (if applicable)
+docker-compose.override.yml
+*.swp
+
+# Nuxt.js stuff:
+
+# Nuxt build output
+.nuxt/
+dist/
+
+# Node.js dependencies
+node_modules/
+
+# Logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# IDE and editor folders (for Nuxt)
+.vscode/
+
+# Environment files for Nuxt
+.env.*
+!.env.example
+
+# Misc
+.DS_Store
+
+# Optional: Ignore build artifacts (optional if you're using CI/CD)
+*.tgz
+
+# Nuxt dev/build outputs
+.output
+.data
+.nuxt
+.nitro
+.cache
+dist
+
+# Node dependencies
+node_modules
+
+# Logs
+logs
+*.log
+
+# Misc
+.DS_Store
+.fleet
+.idea
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+
