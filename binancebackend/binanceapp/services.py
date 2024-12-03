@@ -4,6 +4,9 @@ from django.conf import settings
 from .models import TradingBot
 from .binance_service import BinanceService
 from binance.enums import *
+import time
+import pandas as pd
+from binance.client import Client
 
 class BinanceService:
     def __init__(self):
@@ -17,9 +20,6 @@ class BinanceService:
 
 
 
-import time
-import pandas as pd
-from binance.client import Client
 
 class TradingBotService:
     def __init__(self, bot_id):
