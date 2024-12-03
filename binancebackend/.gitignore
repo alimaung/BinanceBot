@@ -1,7 +1,0 @@
-# python cache files
-.pyc
-
-# Local env files
-.env
-.env.*
-!.env.example
