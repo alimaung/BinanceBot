@@ -10,11 +10,17 @@
     "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "@nuxt/http": "^0.6.4",
     "axios": "^1.7.8",
     "nuxt": "latest",
+    "nuxt-tradingview": "^1.3.3",
     "socket.io-client": "^4.8.1",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "vite-plugin-vuetify": "^2.0.4",
+    "vuetify": "^3.7.5"
   }
 }

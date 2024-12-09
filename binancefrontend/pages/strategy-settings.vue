@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <h1>Trading Bots</h1>
     <div v-if="loading">Loading...</div>
     <div v-if="bots.length">
@@ -14,6 +14,16 @@
     </div>
   </div>
 </template>
+
+<style scoped>
+/* Add your custom styles here */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+</style>
 
 <script setup>
 import { ref, onMounted } from 'vue'

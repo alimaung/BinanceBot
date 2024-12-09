@@ -4,8 +4,8 @@
 *.pyc
 *.pyo
 __pycache__/
-db.sqlite3
-*.sqlite3
+#db.sqlite3
+#*.sqlite3
 
 # Local environment files
 .env
@@ -36,9 +36,10 @@ Thumbs.db
 static/
 media/
 
-# ALPHA VERSION + DASHBOARD
+# folders not in use
 alpha/
 nuxt-black-dashboard-master/
+ft_userdata/
 
 # Docker-related files (if applicable)
 docker-compose.override.yml
@@ -67,27 +68,6 @@ yarn-error.log
 
 # Misc
 .DS_Store
-
-# Optional: Ignore build artifacts (optional if you're using CI/CD)
-*.tgz
-
-# Nuxt dev/build outputs
-.output
-.data
-.nuxt
-.nitro
-.cache
-dist
-
-# Node dependencies
-node_modules
-
-# Logs
-logs
-*.log
-
-# Misc
-.DS_Store
 .fleet
 .idea
 
@@ -95,5 +75,3 @@ logs
 .env
 .env.*
 !.env.example
-
-
