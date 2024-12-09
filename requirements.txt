@@ -6,3 +6,4 @@ python-binance
 python-decouple
 pandas
 django-cors-headers
+time
