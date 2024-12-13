@@ -9,9 +9,6 @@
   <v-card class="custom-card pa-4"></v-card>
 
   <v-card class="custom-card pa-4"></v-card>
-
-
-
 </template>
 
 <style scoped>
@@ -21,8 +18,7 @@
   margin: 16px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  background-color: #ffffff;  /* Add background color */
-  padding: 16px;  /* Adjust padding */
-
+  background-color: #ffffff;
+  padding: 16px;
 }
 </style>

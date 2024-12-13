@@ -26,7 +26,6 @@
 <script setup>
 import { ref } from 'vue'
 
-// Reactive array to store boxes
 const boxes = ref([
   { id: 1 },
   { id: 2 },
@@ -34,18 +33,8 @@ const boxes = ref([
   { id: 4 }
 ])
 
-// Method to add a new box
-const addBox = () => {
-  // Limit the number of boxes to 10
-    boxes.value.push({ id: boxes.value.length + 1 })
-}
-
-// Method to remove the last box
-const removeBox = () => {
-  if (boxes.value.length > 1) {
-    boxes.value.pop()
-  }
-}
+const addBox = () => {boxes.value.push({ id: boxes.value.length + 1 })}
+const removeBox = () => {boxes.value.pop()}
 </script>
   
 <style scoped>

@@ -1,6 +1,6 @@
 <template>
-    <div>
-     <v-card class="pa-4 ma-4">
+  <div>
+    <v-card class="pa-4 ma-4">
       <h1>Data from Django API</h1>
       <div  v-if="pending">Loading...</div>
       <div v-else-if="error">Error: {{ error.message }}</div>
@@ -12,12 +12,12 @@
     </v-card>
 
     <v-card class="pa-4 ma-4">
-        <span class="material-symbols-outlined">settings</span> <!-- Outlined -->
-        <span class="material-symbols-rounded">settings</span>  <!-- Rounded -->
-        <span class="material-symbols-sharp">settings</span>    <!-- Sharp -->
+      <span class="material-symbols-outlined">settings</span> <!-- Outlined -->
+      <span class="material-symbols-rounded">settings</span>  <!-- Rounded -->
+      <span class="material-symbols-sharp">settings</span>    <!-- Sharp -->
     </v-card>
-    </div>
-  </template>
+  </div>
+</template>
   
   <script setup>
   const { data, pending, error } = useFetch('http://localhost:8000/test-binance/')

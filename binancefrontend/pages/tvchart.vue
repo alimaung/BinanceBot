@@ -1,7 +1,3 @@
-<!--
-  https://nuxt-tradingview.volkanakkus.com/documentation/widgets/overview
--->
-
 <template>
   <div class="pa-1">
     <div class="container">

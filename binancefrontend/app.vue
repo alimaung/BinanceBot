@@ -8,9 +8,8 @@
 
 
 
-<script setup lang="ts">
+<script>
 </script>
 
 <style>
-
 </style>

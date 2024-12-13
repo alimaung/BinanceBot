@@ -1,28 +1,21 @@
 <template>
   <v-app>    
-    <!-- Navigation Drawer -->
     <!-- <NavDrawer /> -->
 
-    <!-- App Bar -->
     <AppBar />
 
-    
-    <!-- Content -->
     <v-main>
-      <nuxt-page />
+      <NuxtPage />
     </v-main>
 
-    <!-- Footer -->
     <v-footer style="padding: 70px; height: 100px;">
       <v-row 
         justify="center" 
         no-gutters
-      >
-        <v-btn
+      ><v-btn
           v-for="link in links"
           :key="link"
           class="mx-2"
-          color="white"
           rounded="xl"
           variant="text"
         >
@@ -33,7 +26,6 @@
         </v-col>
       </v-row>
     </v-footer>
-
   </v-app>
 </template>
   
@@ -44,7 +36,6 @@ export default {
     return {
       dialog: false,
       rail: true, // Initially in collapsed (icons-only) mode
-      value: 0,   // Tracks the selected bottom navigation item
       links: [
       'Home',
       'About Us',

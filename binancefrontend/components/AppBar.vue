@@ -4,68 +4,68 @@
       scroll-behavior="hide"
       class="pl-6 pr-6"
     >
-      <template v-slot:prepend>
-        <img src="~/public/img/logo.png" class="logo">
-      </template>
+    <template v-slot:prepend>
+    <img src="~/public/img/logo.png" class="logo">
+    </template>
 
-      <template v-slot:default>
-        <div class="app-bar">
-            <v-btn 
+    <template v-slot:default>
+    <div class="app-bar">
+        <v-btn 
+            class= "app-bar-btn" 
+            variant="text"
+            >Markets
+        </v-btn>
+        <v-menu
+            open-on-hover
+            v-model="menuOpen"
+            >
+            <template v-slot:activator="{ props }">
+                <v-btn
                 class= "app-bar-btn" 
                 variant="text"
-                >Markets
-            </v-btn>
-            <v-menu
-                open-on-hover
-                v-model="menuOpen"
-                >
-                <template v-slot:activator="{ props }">
-                    <v-btn
-                    class= "app-bar-btn" 
-                    variant="text"
-                    v-bind="props"
-                    >Trade
-                    <span class="material-symbols-rounded">{{ menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}</span>
-                    </v-btn>
-                </template>
+                v-bind="props"
+                >Trade
+                <span class="material-symbols-rounded">{{ menuOpen ? 'arrow_drop_up' : 'arrow_drop_down' }}</span>
+                </v-btn>
+            </template>
 
-                <v-card class="menu-card" color="white">
-                    <div class="menu-items ma-3">
-                            <v-row>
-                                    <v-card 
-                                        width="100%"
-                                        class= "bot-card" 
-                                        color="blue ma-2" 
-                                        prepend-icon="mdi-account"
-                                        title="Manage Bots"
-                                        subtitle="Edit and configure your trading bots"
-                                        >
-                                    </v-card>
-                            </v-row>
-                            <v-row>
-                                    <v-card 
-                                        width="100%"
-                                        class= "bot-card" 
-                                        color="red ma-2" 
-                                        prepend-icon="mdi-account"
-                                        title="Bot Status"
-                                        subtitle="Monitor the status of your bots"
-                                        >
-                                    </v-card>
-                            </v-row>
-                        </div>
-                </v-card>
-            </v-menu>
+            <v-card class="menu-card" color="white">
+                <div class="menu-items ma-3">
+                        <v-row>
+                                <v-card 
+                                    width="100%"
+                                    class= "bot-card" 
+                                    color="blue ma-2" 
+                                    prepend-icon="mdi-account"
+                                    title="Manage Bots"
+                                    subtitle="Edit and configure your trading bots"
+                                    >
+                                </v-card>
+                        </v-row>
+                        <v-row>
+                                <v-card 
+                                    width="100%"
+                                    class= "bot-card" 
+                                    color="red ma-2" 
+                                    prepend-icon="mdi-account"
+                                    title="Bot Status"
+                                    subtitle="Monitor the status of your bots"
+                                    >
+                                </v-card>
+                        </v-row>
+                    </div>
+            </v-card>
+        </v-menu>
 
 
-            <v-btn class= "app-bar-btn" variant="text" link to="/strategy-settings">Strategy</v-btn>
-            <v-btn class= "app-bar-btn" variant="text" link to="/account" >Account</v-btn>
-            <v-btn class= "app-bar-btn" variant="text" link to="/bots-overview" >API</v-btn>
-            <v-btn class= "app-bar-btn" variant="text" link to="/tvchart" >Docs</v-btn>
-            <v-btn class= "app-bar-btn" variant="text" link to="/template" >Settings</v-btn>  
-        </div>
-        
-      </template> 
+        <v-btn class= "app-bar-btn" variant="text" link to="/strategy-settings">Strategy</v-btn>
+        <v-btn class= "app-bar-btn" variant="text" link to="/account" >Account</v-btn>
+        <v-btn class= "app-bar-btn" variant="text" link to="/bots-overview" >API</v-btn>
+        <v-btn class= "app-bar-btn" variant="text" link to="/docs" >Docs</v-btn>
+        <v-btn class= "app-bar-btn" variant="text" link to="/template" >Settings</v-btn>  
+    </div>
+    
+    </template> 
 
       <template v-slot:append>
         <v-btn icon="mdi-magnify"></v-btn>

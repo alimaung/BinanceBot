@@ -17,16 +17,6 @@
   </v-card>
 </template>
 
-<style scoped>
-/* Add your custom styles here */
-.container {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-</style>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 
@@ -35,14 +25,13 @@ const loading = ref(true)
 
 const fetchBots = async () => {
   try {
-    // Use the correct axios or $fetch instance here
-    const response = await $fetch('http://127.0.0.1:8000/api/bots/')  // Ensure this endpoint is correct
-    console.log('Fetched bots:', response) // Debug the response to check the structure
-    bots.value = response  // Store the bot data in the ref
+    const response = await $fetch('http://127.0.0.1:8000/api/bots/')
+    console.log('Fetched bots:', response)
+    bots.value = response
   } catch (error) {
     console.error('Error fetching bots:', error)
   } finally {
-    loading.value = false  // Stop the loading state
+    loading.value = false
   }
 }
 
@@ -50,3 +39,11 @@ onMounted(() => {
   fetchBots()
 })
 </script>
+
+<style scoped>
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+</style>

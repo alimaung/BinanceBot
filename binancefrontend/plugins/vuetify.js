@@ -3,7 +3,6 @@ import '@mdi/font/css/materialdesignicons.css'
 import 'material-symbols';
 
 import { createVuetify } from 'vuetify'
-import GoogleSignInPlugin from "vue3-google-signin"
 import colors from 'vuetify/util/colors'
 
 const myCustomLightTheme = {
@@ -43,7 +42,6 @@ const myCustomLightTheme = {
     'theme-on-code': '#000000',
   }
 }
-
 
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({

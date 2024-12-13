@@ -3,7 +3,6 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
-  // No proxy needed
   build: {
     transpile: ['vuetify'],
   },
@@ -17,15 +16,13 @@ export default defineNuxtConfig({
   modules: [
     'nuxt-tradingview',
     'nuxt-vue3-google-signin',
-    '@nuxtjs/i18n',
-
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
-
+    '@nuxtjs/i18n',
   ],
 
   vite: {
@@ -37,15 +34,17 @@ export default defineNuxtConfig({
   },
 
   googleSignIn: {
-    clientId: '109310560315-e3281h1uk9ar3iqoev0mknkskd40dpph.apps.googleusercontent.com',
+    clientId: process.env.GOOGLE_CLIENT_ID
   },
+
   i18n: {
     vueI18n: './i18n.config.ts',
     locales: [
       { code: 'en', iso: 'en-US', name: 'English', file: 'en.json' },
       { code: 'de', iso: 'de-DE', name: 'Deutsch', file: 'de.json' },
-    ], // used in URL path prefix
-    defaultLocale: 'en', // default locale of your project for Nuxt pages and routings
+    ],
+    defaultLocale: 'en',
     strategy: 'prefix',
-  }
+  },
+
 })
