@@ -58,11 +58,11 @@
             </v-menu>
 
 
-            <v-btn class= "app-bar-btn" variant="text">Strategy</v-btn>
-            <v-btn class= "app-bar-btn" variant="text">Account</v-btn>
-            <v-btn class= "app-bar-btn" variant="text">API</v-btn>
-            <v-btn class= "app-bar-btn" variant="text">Docs</v-btn>
-            <v-btn class= "app-bar-btn" variant="text">Settings</v-btn>  
+            <v-btn class= "app-bar-btn" variant="text" link to="/strategy-settings">Strategy</v-btn>
+            <v-btn class= "app-bar-btn" variant="text" link to="/account" >Account</v-btn>
+            <v-btn class= "app-bar-btn" variant="text" link to="/bots-overview" >API</v-btn>
+            <v-btn class= "app-bar-btn" variant="text" link to="/tvchart" >Docs</v-btn>
+            <v-btn class= "app-bar-btn" variant="text" link to="/template" >Settings</v-btn>  
         </div>
         
       </template> 
@@ -115,8 +115,9 @@
 
         
 
-        <v-btn icon="mdi-moon-waning-crescent"></v-btn> <!-- mdi-white-balance-sunny -->
-        
+        <v-btn @click="toggleTheme" icon>
+            <v-icon>{{ darkMode ? 'mdi-white-balance-sunny' : 'mdi-moon-waning-crescent' }}</v-icon>
+        </v-btn>
         <v-dialog
       v-model="dialog"
       width="auto"
@@ -133,11 +134,18 @@
 <script setup>
 import { ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useTheme } from 'vuetify'
 
 // Reactive state variables
 const dialog = ref(false)
 const menuOpen = ref(false)
 const localesOpen = ref(false)
+
+const theme = useTheme()
+
+function toggleTheme () {
+  theme.global.name.value = theme.global.current.value.dark ? 'light' : 'dark'
+}
 
 // Use the i18n API
 const { setLocale } = useI18n()

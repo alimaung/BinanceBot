@@ -54,7 +54,6 @@ const removeBox = () => {
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   margin: 16px;
-  background-color: aliceblue;
 }
 
 .boxes-container {
@@ -66,7 +65,6 @@ const removeBox = () => {
 }
 
 .box-card {
-  background-color: azure;
   text-align: center;
   border: 1px solid #ddd;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
