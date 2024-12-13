@@ -74,7 +74,7 @@
         </v-btn>
   
         <v-divider class="my-4">
-            <span class="text-body-2 text-medium-emphasis px-3 bg-white">
+            <span class="text-body-2 text-medium-emphasis px-3">
             Or continue with
             </span>
         </v-divider>
@@ -150,7 +150,6 @@
   }
   
   .login-title {
-    color: #333;
     font-weight: 600;
   }
   

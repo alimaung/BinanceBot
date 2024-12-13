@@ -4,8 +4,8 @@ from .services import BinanceService
 
 
 from rest_framework import viewsets
-from .models import TradingBot, TradingStrategy, User
-from .serializers import TradingBotSerializer, TradingStrategySerializer, UserSerializer
+from .models import TradingBot, TradingStrategy, User, Docs
+from .serializers import TradingBotSerializer, TradingStrategySerializer, UserSerializer, DocsSerializer
 
 
 class TestBinanceViewSet(APIView):
@@ -25,3 +25,7 @@ class TradingStrategyViewSet(viewsets.ModelViewSet):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+class DocsViewSet(viewsets.ModelViewSet):
+    queryset = Docs.objects.all()
+    serializer_class = DocsSerializer

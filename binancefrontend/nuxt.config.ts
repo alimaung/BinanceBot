@@ -23,6 +23,7 @@ export default defineNuxtConfig({
       })
     },
     '@nuxtjs/i18n',
+    'nuxt-tiptap-editor'
   ],
 
   vite: {
@@ -45,6 +46,10 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'en',
     strategy: 'prefix',
+  },
+
+  tiptap: {
+    prefix: 'Tiptap', //prefix for Tiptap imports, composables not included
   },
 
 })
