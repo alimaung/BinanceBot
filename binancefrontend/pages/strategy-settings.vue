@@ -1,6 +1,7 @@
 <template>
+  <v-card class="pa-4 ma-4" style="border-radius:12px">
   <div class="container">
-    <h1>Trading Bots</h1>
+    <h2>Trading Bots</h2>
     <div v-if="loading">Loading...</div>
     <div v-if="bots.length">
       <ul>
@@ -13,6 +14,7 @@
       <p>No bots found.</p>
     </div>
   </div>
+  </v-card>
 </template>
 
 <style scoped>

@@ -6,11 +6,9 @@
     </v-card-text>
   </v-card>
 
-  <v-card class="custom-card pa-4">
-  </v-card>
+  <v-card class="custom-card pa-4"></v-card>
 
-  <v-card class="custom-card pa-4">
-  </v-card>
+  <v-card class="custom-card pa-4"></v-card>
 
 
 
@@ -23,7 +21,7 @@
   margin: 16px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  background-color: #f5f5f5;  /* Add background color */
+  background-color: #ffffff;  /* Add background color */
   padding: 16px;  /* Adjust padding */
 
 }

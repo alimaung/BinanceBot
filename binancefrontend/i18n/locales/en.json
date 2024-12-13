@@ -1,0 +1,5 @@
+{
+    "hello": "Hello",
+    "welcome": "Welcome to Nuxt 3 with Vuetify",
+    "djangoAPI": "Data from Django API"
+  }

@@ -13,10 +13,11 @@ class BinanceService:
         self.client = Client(
             settings.BINANCE_API_KEY,
             settings.BINANCE_API_SECRET,
+            settings.BINANCE_TESTNET,
         )
 
     def get_account_balance(self):
-        return self.client.get_server_time()
+        return self.client.get_asset_balance(asset='DOGE')
 
 
 

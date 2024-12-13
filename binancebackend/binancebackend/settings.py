@@ -138,4 +138,6 @@ from decouple import config
 
 BINANCE_API_KEY = config('BINANCE_API_KEY')
 BINANCE_API_SECRET = config('BINANCE_API_SECRET')
+BINANCE_API_KEY2 = config('BINANCE_API_KEY2')
+BINANCE_API_SECRET2 = config('BINANCE_API_SECRET2')
 BINANCE_TESTNET = config('BINANCE_TESTNET', default=True, cast=bool)
