@@ -67,7 +67,7 @@ export default {
     }),
     methods: {
         async fetchContent() {
-            const { data, error } = await useFetch('http://localhost:8000/api/docs/1'); // Replace with your backend API endpoint
+            const { data, error } = await useFetch('http://localhost:8000/api/docs/1/'); // Replace with your backend API endpoint
             if (error.value) {
                 console.error('Failed to fetch content:', error.value);
             } else {
@@ -76,7 +76,7 @@ export default {
         },
         async toggleEdit() {
             if (this.isEditing) {
-                const { error } = await useFetch('http://localhost:8000/api/docs/1', {
+                const { error } = await useFetch('http://localhost:8000/api/docs/1/', {
                     method: 'POST',
                     body: { content: this.content },
                 }); // Replace with your backend API endpoint

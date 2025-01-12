@@ -14,6 +14,8 @@ class TestBinanceViewSet(APIView):
         account_info = binance.get_account_balance()
         return Response(account_info)
     
+
+    
 class TradingBotViewSet(viewsets.ModelViewSet):
     queryset = TradingBot.objects.all()
     serializer_class = TradingBotSerializer

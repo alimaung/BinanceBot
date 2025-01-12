@@ -5,7 +5,9 @@
       class="pl-6 pr-6"
     >
     <template v-slot:prepend>
-    <img src="~/public/img/logo.png" class="logo">
+      <div link to="/">
+        <img src="~/public/img/logo.png" class="logo">
+      </div>
     </template>
 
     <template v-slot:default>
@@ -13,6 +15,7 @@
         <v-btn 
             class= "app-bar-btn" 
             variant="text"
+            link to="/tvchart"
             >Markets
         </v-btn>
         <v-menu
@@ -192,6 +195,13 @@ const { setLocale } = useI18n()
   font-size: 14px;
   text-transform: none;
   text-align: left;
-
 }
+
+:hover.v-btn {
+  color: #F0B90B;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
 </style>
